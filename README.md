@@ -14,8 +14,11 @@ better intro animation
 web3isgoinggreat style stuffs + code highlighting stuffs (export object styx perhaps)  
 fix css to be scss (define a global colorscheme)  
 funny ideas from list.md  
-remove sveltekit bloat (wtf is hooks.ts?)  
+remove sveltekit bloat
 make `static` have a better file structure perhaps?  
+figure out how to colour mdi icons on hover
+
+---
 
 ```bash
 npm run dev
