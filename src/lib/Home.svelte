@@ -1,5 +1,5 @@
 <div class="hey">
-	<img src="static/1f44b.svg" class="hand" alt="me waving the hand" />
+	<img src="/1f44b.svg" class="hand" alt="me waving the hand" />
 	<h1>I'm Styx.</h1>
 </div>
 
