@@ -1,12 +1,10 @@
 <script lang="ts">
-	import Header from '$lib/header/Header.svelte';
+	import Header from '$lib/components/header/Header.svelte';
 	import '../app.scss';
 
-	import Icon from 'mdi-svelte';
-    import { mdiTwitter, mdiGithub } from '@mdi/js';
-
-	// TODO: FIX @MDI/JS ERROR
-	// TODO: MAKE MDI ICONS CHANGE COLOUR ON HOVER
+	import Icon from '@iconify/svelte';
+	import twitter from '@iconify/icons-mdi/twitter';
+	import github from '@iconify/icons-mdi/github';
 </script>
 
 <Header />
@@ -17,22 +15,20 @@
 
 <footer>
 	<div>
-		<p class="icon" >Contact:
-			<a href="twitter.com/styxpilled" ><Icon class="icon" path={mdiTwitter} color="black" /></a>
-			<a href="github.com/styxpilled" ><Icon class="icon" path={mdiGithub} color="black" /></a>
+		<p>Contact:
+			<a href="twitter.com/styxpilled" ><Icon class="icon" icon={twitter}/></a>
+			<a href="github.com/styxpilled" ><Icon class="icon" icon={github} /></a>
 		</p>
 	</div>
 	<p>Powered by SvelteKit and unprofessionalism.</p>
 </footer>
 
 <style lang="scss">
-	.icon {
-		fill: black;
-		transition: fill 0.2s;
-		cursor: pointer;
-		margin: 0 0.5rem;
+	div :global(.icon) {
+		color: black;
+		transition: color 0.2s;
 		&:hover {
-			fill: #00aced;
+			// random colour
 			color: #00aced;
 		}
 	}
@@ -54,11 +50,5 @@
 		justify-content: space-evenly;
 		align-items: center;
 		padding: 10px;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
 	}
 </style>
