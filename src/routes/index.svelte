@@ -1,6 +1,6 @@
 <script lang='ts'>
-	import Intro from '$lib/Intro.svelte';
-	import Home from '$lib/Home.svelte';
+	import Intro from '$lib/components/Intro.svelte';
+	import Home from '$lib/components/Home.svelte';
 
 	import { onMount } from 'svelte';
 	import { intro } from '../stores';
@@ -8,10 +8,6 @@
 	onMount(() => {
 		setTimeout(() => ($intro = true), 20000);
 	});
-
-	function toggleIntro() {
-		$intro = !$intro;
-	}
 </script>
 
 <svelte:head>
