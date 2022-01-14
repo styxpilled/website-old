@@ -3,8 +3,9 @@
 	import '../app.scss';
 
 	import Icon from '@iconify/svelte';
-	import twitter from '@iconify/icons-mdi/twitter';
-	import github from '@iconify/icons-mdi/github';
+	import mdiTwitter from '@iconify/icons-mdi/twitter';
+	import mdiGithub from '@iconify/icons-mdi/github';
+	import midDiscord from '@iconify/icons-mdi/discord'
 </script>
 
 <Header />
@@ -16,20 +17,22 @@
 <footer>
 	<div>
 		<p>Contact:
-			<a href="twitter.com/styxpilled" ><Icon class="icon" icon={twitter}/></a>
-			<a href="github.com/styxpilled" ><Icon class="icon" icon={github} /></a>
+			<a href="https://twitter.com/styxpilled" ><Icon class="icon" icon={mdiTwitter}/></a>
+			<a href="https://github.com/styxpilled" ><Icon class="icon" icon={mdiGithub} /></a>
+			<a href="https://discord.com/" ><Icon class="icon" icon={midDiscord} /></a>
 		</p>
 	</div>
-	<p>Powered by SvelteKit and unprofessionalism.</p>
+	<p>Powered by <a href="https://kit.svelte.dev/">SvelteKit</a> and <a href="https://github.com/styxpilled">unprofessionalism</a>.</p>
 </footer>
 
 <style lang="scss">
-	div :global(.icon) {
+	@use '../variables.scss' as *;
+
+	:global(.icon) {
 		color: black;
 		transition: color 0.2s;
 		&:hover {
-			// random colour
-			color: #00aced;
+			color: $link-fg;
 		}
 	}
 
@@ -45,6 +48,7 @@
 	}
 
 	footer {
+		background-color: $bg-dark;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
