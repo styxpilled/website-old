@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Header from '$lib/components/header/Header.svelte';
-	import '../app.scss';
+	import '/src/scss/app.scss';
 
 	import Icon from '@iconify/svelte';
 	import mdiTwitter from '@iconify/icons-mdi/twitter';
@@ -26,7 +26,7 @@
 </footer>
 
 <style lang="scss">
-	@use '../variables.scss' as *;
+	@use 'src/scss/variables.scss' as *;
 
 	:global(.icon) {
 		color: black;
@@ -42,7 +42,6 @@
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
-		max-width: 1024px;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
