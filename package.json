@@ -33,6 +33,8 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
     "@fontsource/source-code-pro": "^4.5.1",
-    "sass": "^1.46.0"
+    "sass": "^1.46.0",
+    "svelte-sequential-preprocessor": "^0.0.7",
+    "svelte-shiki": "^0.0.6"
   }
 }
