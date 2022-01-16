@@ -7,6 +7,15 @@
 				Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+@font-face {
+	font-family: 'Panton Black';
+	src: url('/fonts/panton-black/Panton-Black-Caps.ttf.woff');
+}
+
+.black {
+	font-family: 'Panton Black';
+}
+
 code {
 	font-family: 'Source Code Pro', 'Fira Mono', Menlo, Monaco, Consolas, 'Courier New',
 				monospace;
@@ -28,6 +37,10 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+}
+
+div {
+	border-radius: 0.25rem;
 }
 
 h1,
@@ -67,4 +80,17 @@ button {
 
 button:focus:not(:focus-visible) {
 	outline: none;
+}
+
+input {
+	outline: none;
+	border: none;
+	border-radius: 0.25rem;
+	padding: 0.4rem;
+	margin-top: 0.4rem;
+	margin-bottom: 0.4rem;
+	color: $primary-fg;
+	background-color: $bg;
+	box-shadow: none;
+
 }
