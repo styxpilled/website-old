@@ -1,14 +1,16 @@
 <script lang="ts">
-	import Panel from '$components/Panel.svelte';
+	import Panel from './Panel.svelte';
+	import Credit from './Credit.svelte';
+
 
 	import Icon from '@iconify/svelte';
 	import wavingHand from '@iconify/icons-twemoji/waving-hand';
 </script>
 
 <div class="grid">
-	<div class="logo">
+	<div class="random">
 		<Panel direction="left">
-			<code lang="ts">export const variable: string = "gaming"</code>
+			<Credit />
 		</Panel>
 	</div>
 	<div class="main">
@@ -38,13 +40,14 @@
 <style lang="scss">
 	.grid {
 		width: 100%;
-		height: 45rem;
+		height: 80rem;
+		min-height: 45rem;
 		display: grid;
 		grid-template-columns: 0.8fr 1.4fr 0.8fr;
 		grid-template-rows: 1fr 1fr 1fr;
 		gap: 0px 0px;
 		grid-template-areas:
-			'logo main code'
+			'random main code'
 			'accounts prophecy projects'
 			'. . .';
 		.code, .projects {
@@ -65,8 +68,8 @@
 	.projects {
 		grid-area: projects;
 	}
-	.logo {
-		grid-area: logo;
+	.random {
+		grid-area: random;
 	}
 	.accounts {
 		grid-area: accounts;
