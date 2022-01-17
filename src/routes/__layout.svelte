@@ -1,17 +1,31 @@
+<script context="module">
+	/** @type {import('@sveltejs/kit').Load} */
+	export const load = async ({ url }) => ({
+	  props: {
+		key: url,
+	  },
+	})
+</script>
+
 <script lang="ts">
-	import Header from '$lib/components/header/Header.svelte';
+	import Nav from '$lib/components/Nav.svelte';
+	import PageTransition from "$lib/components/PageTransition.svelte";
+	import { page } from '$app/stores';
 	import '/src/scss/app.scss';
 
 	import Icon from '@iconify/svelte';
 	import mdiTwitter from '@iconify/icons-mdi/twitter';
 	import mdiGithub from '@iconify/icons-mdi/github';
 	import midDiscord from '@iconify/icons-mdi/discord'
+
+	export let key;
 </script>
 
-<Header />
-
+<Nav segment={$page.url}/>
 <main>
-	<slot />
+	<PageTransition refresh={$page.url}>
+		<slot/>
+	</PageTransition>
 </main>
 
 <footer>
