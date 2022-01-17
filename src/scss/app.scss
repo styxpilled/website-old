@@ -57,15 +57,15 @@ p {
 a {
 	color: $link-fg;
 	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 h1 {
 	font-size: 2rem;
 	text-align: center;
+	user-select: none;
 }
 
 h2 {
@@ -76,10 +76,9 @@ input,
 button {
 	font-size: inherit;
 	font-family: inherit;
-}
-
-button:focus:not(:focus-visible) {
-	outline: none;
+	&:focus:not(:focus-visible) {
+		outline: none;
+	}
 }
 
 input {
@@ -92,5 +91,4 @@ input {
 	color: $primary-fg;
 	background-color: $bg;
 	box-shadow: none;
-
 }
