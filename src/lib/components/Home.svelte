@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Panel from './Panel.svelte';
 	import Credit from './Credit.svelte';
-
+	import Prophecy from './Prophecy.svelte';
 
 	import Icon from '@iconify/svelte';
 	import wavingHand from '@iconify/icons-twemoji/waving-hand';
@@ -28,7 +28,7 @@
 		</Panel>
 	</div>
 	<div class="prophecy">
-		if you stan musk you're cringe and fatherless
+		<Prophecy />
 	</div>
 	<div class="projects">
 		<Panel direction="right">
