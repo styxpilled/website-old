@@ -1,45 +1,45 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
+
 	import Panel from './Panel.svelte';
 	import Credit from './Credit.svelte';
 	import Prophecy from './Prophecy.svelte';
+	import Commit from './Commit.svelte';
 
 	import Icon from '@iconify/svelte';
 	import wavingHand from '@iconify/icons-twemoji/waving-hand';
 </script>
 
-<div class="grid">
-	<div class="random">
-		<Panel direction="left">
-			<Credit />
-		</Panel>
-	</div>
+<div class="grid" in:fly={{ x: -200, duration: 400, delay: 600 }}>
+	<Panel classname="panel random" direction="left">
+		<Credit />
+	</Panel>
 	<div class="main">
-			<Icon class="hand" icon={wavingHand} />
-			<h1>I'm Styx.</h1>
+		<Icon class="hand" icon={wavingHand} />
+		<h1>I'm Styx.</h1>
 	</div>
-	<div class="code">
-		<Panel direction="right">
-			<code lang="ts">export const variable: string = "gaming"</code>
-		</Panel>
+
+	<div class="panel code">
+	<Panel classname="panel code" direction="right">
+		<Commit />
+	</Panel>
+	<Panel classname="panel code" direction="right">
+		<code lang="ts">export const variable: string = "gaming"</code>
+	</Panel>
 	</div>
-	<div class="accounts">
-		<Panel direction="left">
-			<code lang="ts">export const variable: string = "gaming"</code>
-		</Panel>
-	</div>
+	<Panel classname="panel accounts" direction="left">
+		<code lang="ts">export const variable: string = "gaming"</code>
+	</Panel>
 	<div class="prophecy">
 		<Prophecy />
 	</div>
-	<div class="projects">
-		<Panel direction="right">
-			<code lang="ts">export const variable: string = "gaming"</code>
-		</Panel>
-	</div>
+	<Panel classname="panel projects" direction="right">
+		<code lang="ts">export const variable: string = "gaming"</code>
+	</Panel>
 </div>
 
 <style lang="scss">
 	.grid {
-		width: 100%;
 		height: 80rem;
 		min-height: 45rem;
 		display: grid;
@@ -50,10 +50,6 @@
 			'random main code'
 			'accounts prophecy projects'
 			'. . .';
-		.code, .projects {
-			display: flex;
-			justify-content: flex-end;
-		}
 	}
 	.main {
 		grid-area: main;
@@ -62,19 +58,31 @@
 		align-items: center;
 		justify-content: center;
 	}
-	.code {
+	div :global(.panel) {
+		margin-bottom: 1rem;
+		display: inline-block;
+		height: min-content;
+	}
+	div :global(.code) {
 		grid-area: code;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
 	}
-	.projects {
+	div :global(.projects) {
 		grid-area: projects;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
 	}
-	.random {
+	div :global(.random) {
 		grid-area: random;
+		width: min-content;
 	}
-	.accounts {
+	div :global(.accounts) {
 		grid-area: accounts;
 	}
-	.prophecy {
+	div :global(.prophecy) {
 		grid-area: prophecy;
 		display: flex;
 		flex-direction: column;

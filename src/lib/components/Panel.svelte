@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let direction: string;
+	export let classname;
 </script>
 
 
-<div class="slide-in" id="slide-{direction}">
+<div class="{classname} slide-in" id="slide-{direction}">
 	<slot>
 
 	</slot>
@@ -21,7 +22,6 @@
 	}
 
 	.slide-in{
-		position: absolute;
 		padding: 2rem;
 		background: $bg-dark;
 		animation: slide-in 0.5s forwards 3s; //10s
