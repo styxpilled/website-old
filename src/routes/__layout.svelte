@@ -47,6 +47,9 @@
 		&:hover {
 			color: $link-fg;
 		}
+		font-size: 1.15rem;
+		position: relative;
+		top: 0.15rem;
 	}
 
 	main {

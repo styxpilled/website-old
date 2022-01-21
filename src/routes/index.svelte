@@ -14,11 +14,9 @@
 	<title>Home</title>
 </svelte:head>
 
-<section>
+<Home />
+<!-- {#if !$intro}
+	<Intro />
+{:else}
 	<Home />
-	<!-- {#if !$intro}
-		<Intro />
-	{:else}
-		<Home />
-	{/if} -->
-</section>
+{/if} -->

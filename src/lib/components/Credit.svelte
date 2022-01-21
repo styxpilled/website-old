@@ -21,8 +21,6 @@
 
 	function luhnCheck(value: string) {
 		if (/[^0-9-\s]+/.test(value)) return false;
-
-		// The Luhn Algorithm. It's so pretty.
 		let nCheck = 0,
 			bEven = false;
 		value = value.replace(/\D/g, '');
@@ -41,11 +39,6 @@
 	}
 
 	function validateExpiryDate() {
-		// use date to see if its not expired
-		// get current month and last 2 digits of year
-		// if year is less than current year, return false
-		// if month is less than current month, return false
-
 		let currentMonth = new Date().getMonth() + 1;
 		let currentYear = new Date().getFullYear().toString().substring(2);
 		let month = date.substring(0, 2);
@@ -58,7 +51,6 @@
 	}
 
 	function validateCVC() {
-		// use cvc to see if its valid
 		let regex = new RegExp('^[0-9]{3}$');
 		console.log('validate cvc');
 
@@ -70,16 +62,16 @@
 {#if valid}
         <p>Are you stupid?</p>
 {:else}
-<p>It would mean a ton if <br> you could support me!</p>
-<form on:submit|preventDefault={validate}>
-	<label for="number">Card number:</label><br>
-	<input bind:value={number} type="text" id="number" name="number" /><br>
-	<label for="date">Expiry date:</label><br>
-	<input bind:value={date} type="text" id="date" name="date" /><br>
-	<label for="cvc">Security code:</label><br>
-	<input bind:value={cvc} type="text" id="cvc" name="cvc" /><br>
-    <input type="submit" value="Submit" class="submit" />
-</form>
+	<p>It would mean a ton if <br> you could support me!</p>
+	<form on:submit|preventDefault={validate}>
+		<label for="number">Card number:</label><br>
+		<input bind:value={number} type="text" id="number" name="number" /><br>
+		<label for="date">Expiry date:</label><br>
+		<input bind:value={date} type="text" id="date" name="date" /><br>
+		<label for="cvc">Security code:</label><br>
+		<input bind:value={cvc} type="text" id="cvc" name="cvc" /><br>
+		<input type="submit" value="Submit" class="submit" />
+	</form>
 {/if}
 
 <style lang="scss">
