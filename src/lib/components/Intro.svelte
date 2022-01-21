@@ -5,7 +5,7 @@
 
 <section>
 	<div class="box" 
-    out:scale={{ duration: 400 }} >
+    out:fade={{ duration: 400 }} >
         <svg id="s" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162.42 114.03">
             <g stroke-width="1.3" fill="none">
                 <!-- ST -->
@@ -38,10 +38,15 @@
 </section>
 
 <style lang="scss">
-	$background: #303032;
-    $foreground: #ffffff;
-	$dark: #303032;
+    @use 'src/scss/variables.scss' as *;
     
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
 	#logo {
 		stroke-dasharray: 100;
 		stroke-dashoffset: 100;
@@ -62,13 +67,13 @@
     @keyframes cool {
         0% {
             stroke: #fdd996;
-            fill-opacity: 0%;
-            fill: $foreground;
+            fill-opacity: 100%;
+            fill: $primary-fg;
         }
         100% {
             stroke: #303032;
             fill-opacity: 100%;
-            fill: $foreground;
+            fill: $primary-fg;
         }
     }
 
@@ -80,25 +85,21 @@
 
 	.box {
 		position: relative;
-		background: $foreground;
-		// border: 0.25rem solid $dark;
+		background: $bg;
 		height: 30rem;
 		width: 30rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		// outline: 0;
-		overflow: hidden; /* Set to none to see fill square outside box */
+		overflow: hidden;
 
-        animation: dim 5s 15s ease-in-out forwards;
+        animation: set 20s ease 1ms 1 forwards;
 		&:after {
 			content: '';
 			position: absolute;
-			// bottom: -50%; /* Center sauare */
-			// left: -50%; /* Center sauare */
 			height: 200%;
 			width: 200%;
-			background-color: $background;
+			background-color: $bg;
 			border-radius: 35%; /* Smooth edges to appear like liquid */
 			animation: spin 4s ease-in-out forwards; /* Set to forwards to freeze on last frame */
 		}
@@ -112,9 +113,15 @@
 		}
 	}
 
-    @keyframes dim {
-        to {
-            background-color: rgba($background, 0);
+    @keyframes set {
+        0% {
+            background-color: $primary-fg;
+        }
+        80% {
+            background-color: $primary-fg;
+        }
+        100% {
+            background-color: rgba($bg, 0);
         }
     }
 </style>
