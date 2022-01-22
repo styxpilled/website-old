@@ -18,7 +18,7 @@ const config = {
                 alias: {
                     '$lib': path.resolve('./src/lib'),
                     '$components': path.resolve('./src/lib/components'),
-                    '$scss': path.resolve('./src/lib/scss'),
+                    '$scss': path.resolve('./src/scss'),
                 }
             }
         }
