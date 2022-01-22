@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let direction: string;
-	export let classname;
+	export let classname: string;
 </script>
 
 

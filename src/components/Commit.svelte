@@ -6,6 +6,7 @@
 
     const url: string = 'https://api.github.com/repos/styxpilled/website/commits/main';
     let sha: string;
+    
     function getcommit() {
         fetch(url)
         .then(response => response.json())

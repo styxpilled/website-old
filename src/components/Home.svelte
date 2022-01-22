@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 
-	import Panel from './Panel.svelte';
-	import Credit from './Credit.svelte';
-	import Prophecy from './Prophecy.svelte';
-	import Commit from './Commit.svelte';
-	import Hey from './Hey.svelte';
+	import Panel from '$components/Panel.svelte';
+	import Credit from '$components/Credit.svelte';
+	import Prophecy from '$components/Prophecy.svelte';
+	import Commit from '$components/Commit.svelte';
+	import Hey from '$components/Hey.svelte';
 </script>
 
 <div class="grid" in:fly={{ x: -200, duration: 400, delay: 600 }}>
