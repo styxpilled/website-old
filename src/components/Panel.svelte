@@ -1,6 +1,16 @@
 <script lang="ts">
 	export let direction: string;
 	export let classname: string;
+	export let expandable: boolean;
+	let expanded: boolean;
+
+	import Icon from '@iconify/svelte';
+	import chevronDown from '@iconify/icons-mdi/chevron-down';
+	import chevronUp from '@iconify/icons-mdi/chevron-up';
+
+	function toggle() {
+		expanded = !expanded;
+	}
 </script>
 
 
@@ -8,6 +18,11 @@
 	<slot>
 
 	</slot>
+	{#if expandable}
+		<button on:click={ toggle }>
+			<Icon icon={expanded ? chevronUp : chevronDown} />
+		</button>
+	{/if}
 </div>
 
 <style lang="scss">
@@ -25,6 +40,15 @@
 		padding: 2rem;
 		background: $bg-dark;
 		animation: slide-in 0.5s forwards 3s; //10s
+	}
+
+	button {
+		font-size: 1.5rem;
+		background-color: $bg-dark;
+		display: flex;
+		align-self: flex-end;
+		// outline: none;
+		border: none;
 	}
 
 	@keyframes slide-in {

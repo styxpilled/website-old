@@ -1,14 +1,11 @@
 .grid {
-    height: 80rem;
-    min-height: 45rem;
     display: grid;
     grid-template-columns: 0.8fr 1.4fr 0.8fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
         'random main code'
-        'accounts prophecy projects'
-        '. . .';
+        'accounts prophecy projects';
 }
 .main {
     grid-area: main;
