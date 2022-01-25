@@ -5,20 +5,15 @@
   import "$styles/app.pcss";
 </script>
 
-<Nav segment="{$page.url}/">
-  <main>
-    <PageTransition refresh={$page.url}>
-      <slot />
-    </PageTransition>
-  </main>
-</Nav>
+<Nav segment="{$page.url}/" />
+<main>
+  <PageTransition refresh={$page.url}>
+    <slot />
+  </PageTransition>
+</main>
 
 <style lang="postcss">
   @import "variables.pcss";
-
-  /* h1 {
-    color: $testo;
-  } */
 
   :global(.icon) {
     color: black;
