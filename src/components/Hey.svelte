@@ -6,7 +6,7 @@
 <Icon class="hand" icon={wavingHand} />
 <h1>I'm Styx.</h1>
 
-<style lang="scss">
+<style lang="postcss">
 	:global(.hand) {
 		animation: wave 15s infinite 5s;
 		font-size: 10rem;

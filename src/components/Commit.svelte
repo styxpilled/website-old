@@ -25,7 +25,7 @@
         <code lang="undefined">{sha}:</code> cool femboy facts! do you think god will forgive you for your sins
 </span>
 
-<style lang="scss">
+<style lang="postcss">
     a {
         margin-bottom: -5%;
         line-height: 0.01rem;

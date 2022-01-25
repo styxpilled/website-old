@@ -40,8 +40,8 @@
 	<p>Powered by <a href="https://kit.svelte.dev/">SvelteKit</a> and <a href="https://github.com/styxpilled">unprofessionalism</a>.</p>
 </div>
 
-<style lang='scss'>
-	@use 'src/scss/variables.scss' as *;
+<style lang="postcss">
+	@import "variables.pcss";
 
 	.content {
 		padding: 1em;

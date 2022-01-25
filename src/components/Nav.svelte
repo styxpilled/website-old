@@ -7,8 +7,8 @@
   <a href="/about" class='{segment === "about" ? "current" : ""}'>About</a>
 </div>
 
-<style lang="scss">
-  @use 'src/scss/variables.scss' as *;
+<style lang="postcss">
+	@import "variables.pcss";
 
   .nav {
     display: flex;

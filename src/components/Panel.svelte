@@ -16,7 +16,6 @@
 
 <div class="{classname} slide-in" id="slide-{direction}">
 	<slot>
-
 	</slot>
 	{#if expandable}
 		<button on:click={ toggle }>
@@ -25,8 +24,8 @@
 	{/if}
 </div>
 
-<style lang="scss">
-	@use 'src/scss/variables.scss' as *;
+<style lang="postcss">
+	@import "variables.pcss";
 
 	#slide-left {
 		transform: translateX(-250%);
@@ -39,7 +38,7 @@
 	.slide-in{
 		padding: 2rem;
 		background: $bg-dark;
-		animation: slide-in 0.5s forwards 3s; //10s
+		animation: slide-in 0.5s forwards 3s;
 	}
 
 	button {
@@ -47,7 +46,7 @@
 		background-color: $bg-dark;
 		display: flex;
 		align-self: flex-end;
-		// outline: none;
+		/* outline: none; */
 		border: none;
 	}
 

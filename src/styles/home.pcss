@@ -1,0 +1,55 @@
+.grid {
+  display: grid;
+
+  /* grid-template: 0.8fr 1.4fr 0.8fr;
+  grid-template: 1fr 1fr; */
+  gap: 0 0;
+  grid-template:
+    "random main code"
+    "accounts prophecy projects";
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div :global(.panel) {
+  margin-bottom: 1rem;
+  display: inline-block;
+  height: min-content;
+}
+
+div :global(.code) {
+  grid-area: code;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+div :global(.projects) {
+  grid-area: projects;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+div :global(.random) {
+  grid-area: random;
+  width: min-content;
+}
+
+div :global(.accounts) {
+  grid-area: accounts;
+}
+
+div :global(.prophecy) {
+  grid-area: prophecy;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

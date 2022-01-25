@@ -68,12 +68,12 @@
 	</form>
 {/if}
 
-<style lang="scss">
+<style lang="postcss">
     form {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        .submit {
+        & .submit {
             align-self: flex-end;
         }
     }

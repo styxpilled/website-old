@@ -36,6 +36,6 @@
 	</Panel>
 </div>
 
-<style lang="scss">
-	@use 'src/scss/home.scss';
+<style lang="postcss">
+	@import 'home.pcss';
 </style>
