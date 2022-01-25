@@ -10,9 +10,9 @@ TODO: (im putting todos here cope)
 proper routes  
 actual navigation  
 better intro animation  
-web3isgoinggreat style stuffs + code highlighting stuffs (export object styx perhaps)  
-fix css to be scss (define a global colorscheme)  
+web3isgoinggreat style stuffs
 funny ideas from list.md  
+expandable panels
 
 ---
 
