@@ -11,12 +11,12 @@ const config = {
     atimport({
       path: ["src/styles"],
     }),
-		autoprefixer,
     variables,
     presetenv,
     nested,
     atrule,
-		short
+		short,
+    autoprefixer,
 ]};
 
 module.exports = config;
