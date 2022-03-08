@@ -31,6 +31,7 @@
 		<Prophecy />
 	</div> -->
 	<Panel classname="panel projects" direction="right" expandable=true>
+    <p slot="extra">named slot</p>
 		projects are here
 		<Commit />
 	</Panel>

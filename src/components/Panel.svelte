@@ -15,9 +15,11 @@
 
 
 <div class="{classname} slide-in" id="slide-{direction}">
-	<slot>
-	</slot>
+	<slot />
 	{#if expandable}
+    {#if expanded}
+      <slot name="extra"/>
+    {/if}
 		<button on:click={ toggle }>
 			<Icon icon={expanded ? chevronUp : chevronDown} />
 		</button>
