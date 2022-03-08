@@ -32,6 +32,7 @@
     margin-bottom: -5%;
     line-height: 0.01rem;
   }
+
   span {
     font-size: 1.2rem;
     margin-left: 1rem;

@@ -27,34 +27,35 @@
 </div>
 
 <style lang="postcss">
-	@import "variables.pcss";
+  @import "variables.pcss";
 
-	#slide-left {
-		transform: translateX(-250%);
-	}
+  #slide-left {
+    transform: translateX(-250%);
+  }
 
-	#slide-right {
-		transform: translateX(250%);
-	}
+  #slide-right {
+    transform: translateX(250%);
+  }
 
-	.slide-in{
-		padding: 2rem;
-		background: $bg-dark;
-		animation: slide-in 0.5s forwards 3s;
-	}
+  .slide-in {
+    padding: 2rem;
+    background: $bg-dark;
+    animation: slide-in 0.5s forwards 3s;
+  }
 
-	button {
-		font-size: 1.5rem;
-		background-color: $bg-dark;
-		display: flex;
-		align-self: flex-end;
-		/* outline: none; */
-		border: none;
-	}
+  button {
+    font-size: 1.5rem;
+    background-color: $bg-dark;
+    display: flex;
+    align-self: flex-end;
 
-	@keyframes slide-in {
-		100% {
-			transform: translateX(0%);
-		}
-	}
+    /* outline: none; */
+    border: none;
+  }
+
+  @keyframes slide-in {
+    100% {
+      transform: translateX(0%);
+    }
+  }
 </style>

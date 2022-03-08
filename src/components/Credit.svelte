@@ -69,12 +69,13 @@
 {/if}
 
 <style lang="postcss">
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        & .submit {
-            align-self: flex-end;
-        }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & .submit {
+      align-self: flex-end;
     }
+  }
 </style>

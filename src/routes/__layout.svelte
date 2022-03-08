@@ -18,9 +18,11 @@
   :global(.icon) {
     color: black;
     transition: color 0.2s;
+
     &:hover {
       color: $link-fg;
     }
+
     font-size: 1.15rem;
     position: relative;
     top: 0.15rem;

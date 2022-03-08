@@ -38,5 +38,5 @@
 </div>
 
 <style lang="postcss">
-	@import 'home.pcss';
+  @import "home.pcss";
 </style>

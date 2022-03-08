@@ -73,6 +73,7 @@
       fill-opacity: 100%;
       fill: $primary-fg;
     }
+
     100% {
       stroke: #303032;
       fill-opacity: 100%;
@@ -95,9 +96,9 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
     animation: set 20s ease 1ms 1 forwards;
-    &:after {
+
+    &::after {
       content: "";
       position: absolute;
       height: 200%;
@@ -107,10 +108,12 @@
       animation: spin 4s ease-in-out forwards; /* Set to forwards to freeze on last frame */
     }
   }
+
   @keyframes spin {
     0% {
       transform: translateY(0) rotate(0deg);
     }
+
     100% {
       transform: translateY(-100%) rotate(400deg);
     }
@@ -120,9 +123,11 @@
     0% {
       background-color: $primary-fg;
     }
+
     80% {
       background-color: $primary-fg;
     }
+
     100% {
       background-color: rgba($bg, 0);
     }

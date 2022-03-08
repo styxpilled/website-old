@@ -41,18 +41,19 @@
 </div>
 
 <style lang="postcss">
-	@import "variables.pcss";
+  @import "variables.pcss";
 
-	.content {
-		padding: 1em;
-		text-align: center;
-	}
-	footer {
-		background-color: $bg-dark;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		align-items: center;
-		padding: 10px;
-	}
+  .content {
+    padding: 1em;
+    text-align: center;
+  }
+
+  footer {
+    background-color: $bg-dark;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+  }
 </style>
