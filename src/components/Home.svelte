@@ -6,6 +6,7 @@
 	import Prophecy from '$components/Prophecy.svelte';
 	import Commit from '$components/Commit.svelte';
 	import Hey from '$components/Hey.svelte';
+  import Skills from '$components/Skills.svelte';
 </script>
 
 <div class="grid" in:fly={{ x: -200, duration: 400, delay: 600 }}>
@@ -25,7 +26,8 @@
 	</div>
 
 	<Panel classname="panel accounts" direction="left">
-		accounts are here
+    <p>I am familiar with:</p>
+		<Skills />
 	</Panel>
 	<!-- <div class="prophecy">
 		<Prophecy />

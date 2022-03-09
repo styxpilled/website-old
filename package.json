@@ -47,6 +47,7 @@
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
 		"@fontsource/source-code-pro": "^4.5.1",
+		"apate": "github:styxpilled/apate",
 		"eslint-formatter-pretty": "^4.1.0",
 		"obnoxious-oracle": "github:styxpilled/obnoxious-oracle",
 		"svelte-sequential-preprocessor": "^0.0.7",
