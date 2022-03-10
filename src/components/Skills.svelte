@@ -8,6 +8,7 @@
     python.lib,
   ],
   separator: ', ',
+  end: '.',
   mode: 'string',
   length: 30,
 };
